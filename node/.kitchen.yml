@@ -1,0 +1,16 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: node
+    driver:
+      box: centos65-1.0.6_LearningChef
+
+suites:
+  - name: default
+    run_list:
+    attributes:

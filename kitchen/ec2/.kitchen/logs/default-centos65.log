@@ -1,0 +1,39 @@
+I, [2015-08-16T01:24:17.567899 #9934]  INFO -- default-centos65: -----> Creating <default-centos65>...
+I, [2015-08-16T01:24:17.571756 #9934]  INFO -- default-centos65: If you are not using an account that qualifies under the AWS
+free-tier, you may be charged to run these suites. The charge
+should be minimal, but neither Test Kitchen nor its maintainers
+are responsible for your incurred costs.
+
+E, [2015-08-16T01:24:19.106939 #9934] ERROR -- default-centos65: Create failed on instance <default-centos65>.
+E, [2015-08-16T01:24:19.107678 #9934] ERROR -- default-centos65: ------Exception-------
+E, [2015-08-16T01:24:19.107725 #9934] ERROR -- default-centos65: Class: Aws::EC2::Errors::InvalidParameterCombination
+E, [2015-08-16T01:24:19.107758 #9934] ERROR -- default-centos65: Message: Non-Windows instances with a virtualization type of 'hvm' are currently not supported for this instance type.
+E, [2015-08-16T01:24:19.107788 #9934] ERROR -- default-centos65: ------Backtrace-------
+E, [2015-08-16T01:24:19.107815 #9934] ERROR -- default-centos65: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/aws-sdk-core-2.1.14/lib/seahorse/client/plugins/raise_response_errors.rb:15:in `call'
+E, [2015-08-16T01:24:19.107842 #9934] ERROR -- default-centos65: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/aws-sdk-core-2.1.14/lib/aws-sdk-core/plugins/param_converter.rb:21:in `call'
+E, [2015-08-16T01:24:19.107877 #9934] ERROR -- default-centos65: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/aws-sdk-core-2.1.14/lib/seahorse/client/plugins/response_target.rb:21:in `call'
+E, [2015-08-16T01:24:19.107903 #9934] ERROR -- default-centos65: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/aws-sdk-core-2.1.14/lib/seahorse/client/request.rb:70:in `send_request'
+E, [2015-08-16T01:24:19.107939 #9934] ERROR -- default-centos65: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/aws-sdk-core-2.1.14/lib/seahorse/client/base.rb:207:in `block (2 levels) in define_operation_methods'
+E, [2015-08-16T01:24:19.107995 #9934] ERROR -- default-centos65: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/aws-sdk-resources-2.1.14/lib/aws-sdk-resources/request.rb:24:in `call'
+E, [2015-08-16T01:24:19.108022 #9934] ERROR -- default-centos65: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/aws-sdk-resources-2.1.14/lib/aws-sdk-resources/operations.rb:41:in `call'
+E, [2015-08-16T01:24:19.108048 #9934] ERROR -- default-centos65: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/aws-sdk-resources-2.1.14/lib/aws-sdk-resources/operations.rb:87:in `call'
+E, [2015-08-16T01:24:19.108074 #9934] ERROR -- default-centos65: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/aws-sdk-resources-2.1.14/lib/aws-sdk-resources/operation_methods.rb:19:in `block in add_operation'
+E, [2015-08-16T01:24:19.108100 #9934] ERROR -- default-centos65: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/kitchen-ec2-0.10.0/lib/kitchen/driver/aws/client.rb:82:in `create_instance'
+E, [2015-08-16T01:24:19.108126 #9934] ERROR -- default-centos65: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/kitchen-ec2-0.10.0/lib/kitchen/driver/ec2.rb:291:in `submit_server'
+E, [2015-08-16T01:24:19.108151 #9934] ERROR -- default-centos65: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/kitchen-ec2-0.10.0/lib/kitchen/driver/ec2.rb:192:in `create'
+E, [2015-08-16T01:24:19.108177 #9934] ERROR -- default-centos65: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:424:in `public_send'
+E, [2015-08-16T01:24:19.108239 #9934] ERROR -- default-centos65: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:424:in `block in perform_action'
+E, [2015-08-16T01:24:19.108267 #9934] ERROR -- default-centos65: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:488:in `call'
+E, [2015-08-16T01:24:19.108294 #9934] ERROR -- default-centos65: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:488:in `synchronize_or_call'
+E, [2015-08-16T01:24:19.108320 #9934] ERROR -- default-centos65: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:453:in `block in action'
+E, [2015-08-16T01:24:19.108346 #9934] ERROR -- default-centos65: /opt/chefdk/embedded/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2015-08-16T01:24:19.108401 #9934] ERROR -- default-centos65: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:452:in `action'
+E, [2015-08-16T01:24:19.108432 #9934] ERROR -- default-centos65: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:424:in `perform_action'
+E, [2015-08-16T01:24:19.108459 #9934] ERROR -- default-centos65: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `create_action'
+E, [2015-08-16T01:24:19.108484 #9934] ERROR -- default-centos65: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:341:in `block in transition_to'
+E, [2015-08-16T01:24:19.108510 #9934] ERROR -- default-centos65: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:340:in `each'
+E, [2015-08-16T01:24:19.108535 #9934] ERROR -- default-centos65: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:340:in `transition_to'
+E, [2015-08-16T01:24:19.108612 #9934] ERROR -- default-centos65: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:127:in `create'
+E, [2015-08-16T01:24:19.108639 #9934] ERROR -- default-centos65: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:176:in `public_send'
+E, [2015-08-16T01:24:19.108665 #9934] ERROR -- default-centos65: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:176:in `block (2 levels) in run_action'
+E, [2015-08-16T01:24:19.108692 #9934] ERROR -- default-centos65: ----------------------

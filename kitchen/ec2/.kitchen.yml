@@ -1,23 +1,3 @@
-# Install AWS ec2-tools
-sudo easy_install pip
-sudo pip install awscli
-
-# autocomplete
-complete -C '/usr/local/bin/aws_completer' aws
-
-# decode encrypted message
-aws sts decode-authorization-message --encoded-message <encodedmessage>
-
-# AWS credentials
-# edit: ~/.aws/credentials
-[default]
-aws_access_key_id="some_key"
-aws_secret_access_key="some_secret"
-
-# ec2-kitchen
-kitchen init
-
-# edit .kitchen.yml
 ---
 driver:
   require_chef_omnibus: true
@@ -35,7 +15,7 @@ platforms:
       instance_type: t2.micro
       subnet_id: subnet-68532304
       associate_public_ip: true
-      tags:
+      tags: 
         Name: test-kitchen
       block_device_mappings:
         - ebs_device_name: /dev/sda1
@@ -52,3 +32,4 @@ suites:
   - name: default
     run_list:
     attributes:
+

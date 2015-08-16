@@ -1,0 +1,58 @@
+# Install AWS ec2-tools
+sudo easy_install pip
+sudo pip install awscli
+
+# autocomplete
+complete -C '/usr/local/bin/aws_completer' aws
+
+# decode encrypted message
+aws sts decode-authorization-message --encoded-message <encodedmessage>
+
+# AWS credentials
+# edit: ~/.aws/credentials
+[default]
+aws_access_key_id="some_key"
+aws_secret_access_key="some_secret"
+
+# ec2-kitchen
+# list of drivers:
+kitchen driver discover
+# By convention, the kitchen- part of the driver name is dropped when specified in kitchen.yml
+
+kitchen init
+
+# edit .kitchen.yml
+---
+driver:
+  require_chef_omnibus: true
+  name: ec2
+  region: us-east-1
+  availability_zone: us-east-1a
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: centos7
+    driver:
+      image_id: ami-96a818fe
+      instance_type: t2.micro
+      subnet_id: subnet-68532304
+      associate_public_ip: true
+      tags:
+        Name: test-kitchen
+      block_device_mappings:
+        - ebs_device_name: /dev/sda1
+          ebs_volume_type: standard
+          ebs_volume_size: 8
+          ebs_delete_on_termination: true
+
+transport:
+  username: centos
+  aws_ssh_key_id: id_rsa
+  aws_ssh_key: $HOME/.ssh/id_rsa
+
+suites:
+  - name: default
+    run_list:
+    attributes:
