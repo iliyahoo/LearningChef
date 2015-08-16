@@ -1,0 +1,17 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: centos65
+    driver:
+      box: centos65-1.0.6_LearningChef
+
+suites:
+  - name: default
+    run_list:
+      - recipe[motd::default]
+    attributes:
