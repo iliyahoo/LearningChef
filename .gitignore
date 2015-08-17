@@ -1,4 +1,7 @@
 .idea
 hello.txt
 **/.kitchen
+chef-repo/.chef
+.DS_Store
+**/*.rpm
 

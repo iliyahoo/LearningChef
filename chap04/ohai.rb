@@ -11,3 +11,6 @@ end
 json = JSON.parse(json)
 puts json['virtualization']
 puts json['ipaddress']
+
+movies = {one: "terminator".subtitle}
+movies[:two] = "batman".

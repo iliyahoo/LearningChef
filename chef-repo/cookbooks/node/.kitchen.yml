@@ -1,0 +1,18 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: node
+    driver:
+      box: centos65-1.0.6_LearningChef
+      network:
+        - ["private_network", {ip: "192.168.33.7"}]
+
+suites:
+  - name: chef
+    run_list:
+    attributes:
