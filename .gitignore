@@ -4,4 +4,5 @@ hello.txt
 chef-repo/.chef
 .DS_Store
 **/*.rpm
+**/*.pem*
 
